@@ -7,8 +7,22 @@
 
 module.exports = {
 
+  identity: 'clans',
   attributes: {
-
+    name: {
+      type: 'string',
+      unique: true
+    },
+    homeClanMatches: {
+      collection: 'clans',
+      through: 'clan_matches',
+      via: 'home_clan'
+    },
+    awayClanMatches: {
+      collection: 'clans',
+      through: 'clan_matches',
+      via: 'away_clan'
+    } 
   }
 };
 
