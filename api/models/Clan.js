@@ -6,23 +6,31 @@
 */
 
 module.exports = {
-
+  schema: true,
   identity: 'clans',
   attributes: {
     name: {
       type: 'string',
       unique: true
     },
-    homeClanMatches: {
+    homeClans: {
       collection: 'clans',
       through: 'clan_matches',
       via: 'home_clan'
     },
-    awayClanMatches: {
+    awayClans: {
       collection: 'clans',
       through: 'clan_matches',
       via: 'away_clan'
-    } 
+    } ,
+    awayClanMatches: {
+      collection: 'clan_matches',
+      via: 'away_clan'
+    },
+    homeClanMatches: {
+      collection: 'clan_matches',
+      via: 'home_clan'
+    }
   }
 };
 

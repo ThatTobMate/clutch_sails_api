@@ -21,7 +21,8 @@ module.exports = {
           foreignKey: true,
           references: 'clans',
           on: 'id',
-          onKey: 'id'
+          onKey: 'id',
+          model: 'clans'
       },
       away_clan: {
           columnName: 'away_clan_id',
@@ -29,7 +30,8 @@ module.exports = {
           foreignKey: true,
           references: 'clans',
           on: 'id',
-          onKey: 'id'
+          onKey: 'id',
+          model: 'clans'
       }
   }
 };
