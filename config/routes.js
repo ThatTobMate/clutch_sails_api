@@ -34,7 +34,14 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
-  }
+  },
+
+  'GET /user/me': {controller: "User", action: "me"},
+  'GET /user': {controller: "User", action: "find"},
+  'GET /user/:id': {controller: "User", action: "findOne"},
+  'PUT /user/:id': {controller: "User", action: "update"}
+
+
 
   /***************************************************************************
   *                                                                          *

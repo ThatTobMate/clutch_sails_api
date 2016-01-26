@@ -5,6 +5,7 @@
  */
 module.exports = {
     schema: true,
+    identity: 'users',
     attributes: {
         username: {
             type: 'string',
@@ -36,6 +37,10 @@ module.exports = {
         socialProfiles: {
             type: 'object',
             defaultsTo: {}
+        },
+        clans: {
+            collection: 'clans',
+            via: 'users'
         },
  
         toJSON: function () {

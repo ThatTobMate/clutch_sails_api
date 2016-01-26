@@ -13,6 +13,13 @@ module.exports = {
       type: 'string',
       unique: true
     },
+    users: {
+      collection: 'users',
+      via: 'clans'
+    },
+    league: {
+      model: 'leagues'
+    },
     homeClans: {
       collection: 'clans',
       through: 'clan_matches',

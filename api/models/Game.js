@@ -8,13 +8,21 @@
 module.exports = {
 
   schema: true,
+  identity: 'games',
   attributes: {
     name: {
       type: 'string',
       unique: true
     },
+    gameCode: {
+      type: 'string'
+    },
     console: {
-      model: 'console'
+      model: 'consoles'
+    },
+    leagues: {
+      collection: 'leagues',
+      via: 'game'
     }
   }
 };

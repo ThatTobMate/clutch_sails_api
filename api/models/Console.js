@@ -7,13 +7,14 @@
 
 module.exports = {
   schema: true,
+  identity: 'consoles',
   attributes: {
     name: {
       type: 'string',
       unique: true
     },
     games: {
-      collection: 'game',
+      collection: 'games',
       via: 'console'
     }
   }

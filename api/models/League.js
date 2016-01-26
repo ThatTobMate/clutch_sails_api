@@ -6,9 +6,23 @@
 */
 
 module.exports = {
-
+  schema: true,
+  identity: 'leagues',
   attributes: {
-
+    name: {
+      type: 'string',
+      unique: true
+    },
+    type: {
+      type: 'string'
+    },
+    game: {
+      model: 'games'
+    },
+    clans: {
+      collection: 'clans',
+      via: 'league'
+    }
   }
 };
 
