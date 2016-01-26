@@ -19,11 +19,11 @@
 
 module.exports.policies = {
 
-  '*': ['isAuthenticated'], // Protect all controllers from unauthenticated users.
+  // '*': ['isAuthenticated'], // Protect all controllers from unauthenticated users.
 
-  AuthController: { 
-      '*': true
-  } // Override the isAuthenticated call for the AuthController and allow anybody to hit that.
+  // AuthController: { 
+  //     '*': true
+  // } // Override the isAuthenticated call for the AuthController and allow anybody to hit that.
 
 
 

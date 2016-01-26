@@ -36,10 +36,16 @@ module.exports.routes = {
     view: 'homepage'
   },
 
+  // User Routes
   'GET /user/me': {controller: "User", action: "me"},
-  'GET /user': {controller: "User", action: "find"},
-  'GET /user/:id': {controller: "User", action: "findOne"},
-  'PUT /user/:id': {controller: "User", action: "update"}
+
+  // Clan Match Routes
+  'GET /clan_matches': {model: 'clan_matches' ,controller: "ClanMatches", action: "find"},
+  'GET /clan_match/:id': {model: 'clan_matches' ,controller: "ClanMatches", action: "findOne"},
+  'PUT /clan_match/:id': {model: 'clan_matches' ,controller: "ClanMatches", action: "update"},
+  'DELETE /clan_match/:id': {model: 'clan_matches' ,controller: "ClanMatches", action: "destroy"},
+
+
 
 
 

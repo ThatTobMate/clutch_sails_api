@@ -9,30 +9,38 @@ module.exports = {
 
   identity: 'clan_matches',
   attributes: {
-      id: {
-        type: 'integer',
-        primaryKey: true,
-        autoIncrement: true
-      },
-      time: 'string',
-      home_clan: {
-          columnName: 'home_clan_id',
-          type: 'integer',
-          foreignKey: true,
-          references: 'clans',
-          on: 'id',
-          onKey: 'id',
-          model: 'clans'
-      },
-      away_clan: {
-          columnName: 'away_clan_id',
-          type: 'integer',
-          foreignKey: true,
-          references: 'clans',
-          on: 'id',
-          onKey: 'id',
-          model: 'clans'
-      }
+    id: {
+      type: 'integer',
+      primaryKey: true,
+      autoIncrement: true
+    },
+    time: 'string',
+    home_clan: {
+      columnName: 'home_clan_id',
+      type: 'integer',
+      foreignKey: true,
+      references: 'clans',
+      on: 'id',
+      onKey: 'id',
+      model: 'clan'
+    },
+    away_clan: {
+      columnName: 'away_clan_id',
+      type: 'integer',
+      foreignKey: true,
+      references: 'clans',
+      on: 'id',
+      onKey: 'id',
+      model: 'clan'
+    },
+    createdAt: {
+      type: 'datetime',
+      columnName: 'created_at'
+    },
+    updatedAt: {
+      type: 'datetime',
+      columnName: 'updated_at'
+    }
   }
 };
 

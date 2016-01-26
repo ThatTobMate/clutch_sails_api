@@ -5,7 +5,7 @@
  */
 module.exports = {
     schema: true,
-    identity: 'users',
+    // identity: 'users',
     attributes: {
         username: {
             type: 'string',
@@ -23,11 +23,13 @@ module.exports = {
         },
         firstName: {
             type: 'string',
-            defaultsTo: ''
+            defaultsTo: '',
+            columnName: 'first_name'
         },
         lastName: {
             type: 'string',
-            defaultsTo: ''
+            defaultsTo: '',
+            columnName: 'last_name'
         },
         photo: {
             type: 'string',
@@ -36,11 +38,20 @@ module.exports = {
         },
         socialProfiles: {
             type: 'object',
-            defaultsTo: {}
+            defaultsTo: {},
+            columnName: 'social_profiles'
         },
         clans: {
-            collection: 'clans',
+            collection: 'clan',
             via: 'users'
+        },
+        createdAt: {
+          type: 'datetime',
+          columnName: 'created_at'
+        },
+        updatedAt: {
+          type: 'datetime',
+          columnName: 'updated_at'
         },
  
         toJSON: function () {

@@ -7,26 +7,25 @@
 
 module.exports = {
   schema: true,
-  identity: 'clans',
   attributes: {
     name: {
       type: 'string',
       unique: true
     },
     users: {
-      collection: 'users',
+      collection: 'user',
       via: 'clans'
     },
     league: {
-      model: 'leagues'
+      model: 'league'
     },
     homeClans: {
-      collection: 'clans',
+      collection: 'clan',
       through: 'clan_matches',
       via: 'home_clan'
     },
     awayClans: {
-      collection: 'clans',
+      collection: 'clan',
       through: 'clan_matches',
       via: 'away_clan'
     } ,
@@ -37,6 +36,14 @@ module.exports = {
     homeClanMatches: {
       collection: 'clan_matches',
       via: 'home_clan'
+    },
+    createdAt: {
+      type: 'datetime',
+      columnName: 'created_at'
+    },
+    updatedAt: {
+      type: 'datetime',
+      columnName: 'updated_at'
     }
   }
 };

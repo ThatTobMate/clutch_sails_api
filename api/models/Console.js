@@ -7,15 +7,22 @@
 
 module.exports = {
   schema: true,
-  identity: 'consoles',
   attributes: {
     name: {
       type: 'string',
       unique: true
     },
     games: {
-      collection: 'games',
+      collection: 'game',
       via: 'console'
+    },
+    createdAt: {
+      type: 'datetime',
+      columnName: 'created_at'
+    },
+    updatedAt: {
+      type: 'datetime',
+      columnName: 'updated_at'
     }
   }
 };
