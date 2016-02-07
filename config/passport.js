@@ -34,7 +34,7 @@ var JWT_STRATEGY_CONFIG = {
  * Triggers when user authenticates via local strategy
  */
 function _onLocalStrategyAuth(email, password, next) {
-  users.findOne({email: email})
+  User.findOne({email: email})
     .exec(function (error, user) {
       if (error) return next(error, false, {});
  

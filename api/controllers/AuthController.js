@@ -31,7 +31,7 @@ module.exports = {
    * @param {Object} res Response object
    */
   signup: function (req, res) {
-    users
+    User
       .create(_.omit(req.allParams(), 'id')) //Using the built in create method from the User controller REST routes like Rails.
       .then(function (user) {
         return {
