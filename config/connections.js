@@ -82,14 +82,6 @@ module.exports.connections = {
   // port: 5432,
   // }
 
-  // postgresServer: {
-  // adapter: 'sails-postgresql',
-  // host: 'localhost',
-  // user: 'ThatTobMate',
-  // database: 'Clutch_Dev',
-  // port: 5432,
-  // }
-
   postgresServer: {
     adapter: 'sails-postgresql',
     url: process.env.DATABASE_URL,
