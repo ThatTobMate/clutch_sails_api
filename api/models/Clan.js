@@ -12,30 +12,19 @@ module.exports = {
       type: 'string',
       unique: true
     },
+    abbreviation: {
+      type: 'string'
+    },
+    website: {
+      type: 'string'
+    },
     users: {
       collection: 'user',
       via: 'clans'
     },
-    league: {
-      model: 'league'
-    },
-    homeClans: {
-      collection: 'clan',
-      through: 'clan_matches',
-      via: 'home_clan'
-    },
-    awayClans: {
-      collection: 'clan',
-      through: 'clan_matches',
-      via: 'away_clan'
-    } ,
-    awayClanMatches: {
-      collection: 'clan_matches',
-      via: 'away_clan'
-    },
-    homeClanMatches: {
-      collection: 'clan_matches',
-      via: 'home_clan'
+    factions: {
+      collection: 'faction',
+      via: 'clans'
     },
     createdAt: {
       type: 'datetime',
@@ -47,4 +36,25 @@ module.exports = {
     }
   }
 };
+
+
+// ,
+//     homeClans: {
+//       collection: 'clan',
+//       through: 'clan_matches',
+//       via: 'home_clan'
+//     },
+//     awayClans: {
+//       collection: 'clan',
+//       through: 'clan_matches',
+//       via: 'away_clan'
+//     } ,
+//     awayClanMatches: {
+//       collection: 'clan_matches',
+//       via: 'away_clan'
+//     },
+//     homeClanMatches: {
+//       collection: 'clan_matches',
+//       via: 'home_clan'
+//     }
 

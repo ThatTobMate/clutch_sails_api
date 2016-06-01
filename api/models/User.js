@@ -45,6 +45,10 @@ module.exports = {
             collection: 'clan',
             via: 'users'
         },
+        factions: {
+            collection: 'faction',
+            via: 'users'
+        },
         createdAt: {
           type: 'datetime',
           columnName: 'created_at'

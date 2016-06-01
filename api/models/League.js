@@ -7,7 +7,6 @@
 
 module.exports = {
   schema: true,
-  // identity: 'leagues',
   attributes: {
     name: {
       type: 'string',
@@ -19,8 +18,8 @@ module.exports = {
     game: {
       model: 'game'
     },
-    clans: {
-      collection: 'clan',
+    factions: {
+      collection: 'faction',
       via: 'league'
     },
     createdAt: {

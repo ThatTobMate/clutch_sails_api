@@ -39,6 +39,9 @@ module.exports.routes = {
   // User Routes
   // 'GET /user/me': {controller: "User", action: "me"},
 
+  // News Routes
+  'GET /news/getNews': {controller: "News", action: "getNews"},
+
   // Clan Match Routes
   'GET /clan_matches': {model: 'clan_matches' ,controller: "ClanMatches", action: "find"},
   'GET /clan_match/:id': {model: 'clan_matches' ,controller: "ClanMatches", action: "findOne"},
